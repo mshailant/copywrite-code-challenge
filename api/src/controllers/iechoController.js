@@ -22,7 +22,7 @@ const iechoController = (req, res) => {
         text: text.split("").reverse().join(""),
         palindrome: isPalindrome(text),
       })
-    : res.status(400).json({ text: "No text" });
+    : res.status(400).json({ error: "No text" });
 };
 
 export default iechoController;
