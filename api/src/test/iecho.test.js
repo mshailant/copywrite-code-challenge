@@ -1,5 +1,4 @@
-const request = require("supertest")("http://localhost:3001");
-const expect = require("chai").expect;
+const { request, expect } = require("../config");
 
 describe("Iecho", () => {
   it("should return the reverse text", async () => {

@@ -4,8 +4,10 @@
   "description": "CopyWrite Code Challenge",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build && node build/index.js",
+    "build": "rm -rf ./build && babel -d ./build ./src",
     "dev": "nodemon --exec babel-node ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/test/iecho.test.js"
   },
   "author": "Martin Sebastian Hailant",
   "license": "ISC",
